@@ -13,7 +13,7 @@
         android:theme="@style/Theme.GetPassengers"
         tools:targetApi="31">
         <activity
-            android:name=".GetPassengersActivity"
+            android:name=".GetPassengers"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

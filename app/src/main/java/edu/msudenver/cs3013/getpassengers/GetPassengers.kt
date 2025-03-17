@@ -8,7 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class GetPassengersActivity : AppCompatActivity() {
+class GetPassengers : AppCompatActivity() {
 
     data class Passenger(val fName: String, val lName: String, val phone: String) {
         override fun toString(): String {

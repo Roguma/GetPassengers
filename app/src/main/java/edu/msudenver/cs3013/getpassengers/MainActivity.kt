@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var listText: TextView
     private lateinit var getPassengerListButton: Button
 
-    // Register for activity result to get data from GetPassengersActivity
+    // Register for activity result to get data from GetPassengers
     private val startForResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val data = result.data
@@ -37,12 +37,12 @@ class MainActivity : AppCompatActivity() {
         getPassengerListButton = findViewById(R.id.btnGetPassengers)
 
         getPassengerListButton.setOnClickListener {
-            openGetPassengersActivity()
+            openGetPassengers()
         }
     }
 
-    private fun openGetPassengersActivity() {
-        val intent = Intent(this, GetPassengersActivity::class.java)
+    private fun openGetPassengers() {
+        val intent = Intent(this, GetPassengers::class.java)
         startForResult.launch(intent) // Start GetPassengersActivity
     }
 }
