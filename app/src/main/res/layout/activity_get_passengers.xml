@@ -1,10 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GetPassengers">
+    android:background="@android:color/background_light"
+    tools:context=".GetPassengersActivity"
+    app:layout_constraintTop_toBottomOf="parent">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="386dp"
+        android:layout_height="60dp"
+        android:text="Enter One Passenger"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/FirstName"
+        android:layout_width="143dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Enter first name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@id/LastName"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:ignore="MissingConstraints"/>
+
+    <EditText
+        android:id="@+id/LastName"
+        android:layout_width="181dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Enter Last Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/FirstName"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+
+    <EditText
+        android:id="@+id/PhoneNumber"
+        android:layout_width="364dp"
+        android:layout_height="56dp"
+        android:hint="Enter phone number"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/FirstName"/>
+
+    <Button
+        android:id="@+id/btnAddPassenger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="ADD PASSENGER"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PhoneNumber"/>
+
+    <Button
+        android:id="@+id/btnReturnList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="RETURN LIST"
+        android:textColor="@android:color/white"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAddPassenger"/>
+
+    <TextView
+        android:id="@+id/tvPassengerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
+        android:text="ACCUMULATING PASSENGER LIST
+---------------------------"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnReturnList" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
